@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./components/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./app.css">
+  <title>Crypto Market</title>
+
+
+</head>
+<body>
+  <div class="container" ng-app="cryptoMarketApp" ng-controller="cryptoMarketController">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card my-5">
+          <div class="card-body">
+            <h2 class="card-title text-center">Crypto Search</h5>
+            <h6 class="card-title text-center">Search Coins to Get Its Price</h6>
+            <div class="form">
+              <div class="form-label-group">
+                <label>Enter Crypto Currency Symbol:</label>
+                <input type="text" ng-model="coinSymbol" class="form-control" placeholder="Symbol" required autofocus>
+              </div>
+              <br/>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" ng-click ="getCoin()" type="submit">Search</button>
+              <hr class="my-4">
+            </div>
+            <div >
+                <label>Coin Symbol:</label>
+              <p>{{result.symbol}}</p>
+                <label>Coin Price:</label>
+              <p>{{result.price_usd}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+    <script src="./components/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="./components/js/bootstrap.min.js"></script>
+    <script src="./components/js/angular.min.js"></script>
+    <script src="./app.js"></script>
+</html>
